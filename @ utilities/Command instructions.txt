@@ -1,0 +1,28 @@
+OrientHandle
+
+The command is an Orient3Pt simplifications, as it allows the use of "handles" (L - shaped polyline) for orientation.
+The command reads L-shaped polylines drawn like this (make sure to respect points order):
+
+  Y - 3rd point
+  |
+  |
+ O.____ X - 1st point
+2nd point
+
+STEPS
+
+1. Select the object(s) you want to orient
+2. Select "sender" handle
+3. Select "receiver" handle
+
+The command does not have a "copy" option, so make sure you are working with a copy of the object that you are orienting.
+
+
+HINTS
+
+If you want to use the same face both as sender and receiver, be aware than handle orientation decides in which way the objects will be oriented.
+
+Example: if you want to orient a pyramid using its base face in order to get an octahedron, the handles in the base face should be oriented as follows:
+
+. sender handle: X-Y oriented so that their resulting Z axis is directed outward from the face
+. receiver handle: rotate the sender handle (making a copy) along its Y axis (its Z will point then inward)
